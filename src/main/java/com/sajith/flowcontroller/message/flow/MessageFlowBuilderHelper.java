@@ -47,7 +47,7 @@ public class MessageFlowBuilderHelper {
 
         // Creating Dispatcher
         Properties dispatcherProperties = new Properties();
-        dispatcherProperties.setProperty("URL", "http://localhost:9090/productionStream");
+        dispatcherProperties.setProperty("URL", "http://localhost:9090/backend");
 
         Dispatcher dispatcher = DispatcherFactory.createDispatcher("http", dispatcherProperties);
         dispatcher.init(dispatcherProperties);

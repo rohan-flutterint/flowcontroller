@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class QuotaBasedRule implements Rule {
     Map<String, Quota> senderQuota = new HashMap<>();
-    private static final int QUOTA_PERIOD_MILLS = 60000;
+    private static final int QUOTA_PERIOD_MILLS = 100;
 
     @Override
     public boolean evaluate(String key) {

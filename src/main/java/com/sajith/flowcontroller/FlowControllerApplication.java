@@ -32,8 +32,9 @@ public class FlowControllerApplication {
 		Properties properties = KafkaUtil.createDefaultConsumerProperties("EventFlow" + serverId);
 		KafkaThrottleDecisionDistributor throttleDecisionDistributor = new KafkaThrottleDecisionDistributor(properties);
 		throttleDecisionDistributor.init(topics);
-		MessageEntryPoint entryPoint = MessageFlowBuilderHelper.buildMessageFlow();
 		ApplicationContext.setThrottleDecisionDistributor(throttleDecisionDistributor);
+
+		MessageEntryPoint entryPoint = MessageFlowBuilderHelper.buildMessageFlow();
 		ApplicationContext.setEntryPoint(entryPoint);
 
 		if (args.length > 1 && args[1].equals("throttle")){
