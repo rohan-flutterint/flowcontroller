@@ -1,7 +1,6 @@
 package com.sajith.flowcontroller.throttle;
 
 import com.sajith.flowcontroller.ApplicationContext;
-import com.sajith.flowcontroller.FlowControllerApplication;
 import com.sajith.flowcontroller.kafka.KafkaUtil;
 import com.sajith.flowcontroller.throttle.common.ThrottleConstants;
 import com.sajith.flowcontroller.throttle.engine.publish.KafkaThrottleDecisionEventPublisher;
@@ -22,7 +21,7 @@ public class ThrottleEngineBuilderHelper {
                         ThrottleConstants.PER_SENDER_THROTTLE_EVENT_KAFKA_TOPIC);
 
         QuotaBasedRule perSenderQuotaRule = new QuotaBasedRule();
-        SenderAllowDenyRule senderAllowDenyRule = new SenderAllowDenyRule();
+        AllowDenyRule senderAllowDenyRule = new AllowDenyRule();
         List<Rule> rules = new ArrayList<>();
         rules.add(perSenderQuotaRule);
         rules.add(senderAllowDenyRule);

@@ -4,10 +4,10 @@ import com.sajith.flowcontroller.throttle.common.ControlEvent;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SenderAllowDenyRule implements Rule {
+public class AllowDenyRule implements Rule {
     private List<String> blockedUsers;
 
-    public SenderAllowDenyRule() {
+    public AllowDenyRule() {
         blockedUsers = new ArrayList<>();
     }
     @Override
