@@ -1,0 +1,3 @@
+<logger name="kafka" level="INFO">
+    <appender-ref ref="STDOUTAppender" />
+</logger>
